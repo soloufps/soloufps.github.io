@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <div class="greetings">
+        <span>T</span>
+        <span>E</span>
+        <span>🖤</span>
+        <span>A</span>
+        <span>M</span>
+        <span>O</span>
+    </div>
+    <div class="description">
+        <span>Me amas?</span>
+    </div>
+    <div class="button">
+        <button class="botones">
+            <a href="flower.html" style="color: #fff;">SI</a>
+        </button>
+        <button class="botones" id="noButton" >
+        <a style="color: #fff;">NO</a>
+        </button>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+   body {
+    background: url("img/sara.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    background-size: 80%; /* más pequeña */
+    background-color: black;
+}
+
+
+
+
+    .description span {
+        display: block;
+        margin-top: 20px;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+    }
+
+    
+
+    
+</style>
+
+ <script>
+        const noButton = document.getElementById("noButton");
+
+        noButton.addEventListener("mouseenter", () => {
+            // tamaño máximo de la pantalla
+            const maxX = window.innerWidth - noButton.offsetWidth;
+            const maxY = window.innerHeight - noButton.offsetHeight;
+
+            // posición aleatoria
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            // mover el botón
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        });
+    </script>
+
